@@ -10,4 +10,8 @@ class MainController extends Controller
     {
         return view('index');
     }
+    function shop()
+    {
+        return view('shop');
+    }
 }
