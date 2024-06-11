@@ -14,4 +14,8 @@ class MainController extends Controller
     {
         return view('shop');
     }
+    function about_us()
+    {
+        return view('about_us');
+    }
 }
