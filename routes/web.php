@@ -16,8 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::controller(MainController::class)->group(function () {
-    Route::get('/', 'index');
-    Route::get('/shop', 'shop');
-    Route::get('/about_us', 'about_us');
-    Route::get('/services', 'services');
+    Route::get('/', 'index')->name('home');
+    Route::get('/shop', 'shop')->name('shop');
+    Route::get('/about_us', 'about_us')->name('about_us');
+    Route::get('/services', 'services')->name('services');
+    Route::get('/blog', 'blog')->name('blog');
+    Route::get('/contact_us', 'contact_us')->name('contact_us');
 });

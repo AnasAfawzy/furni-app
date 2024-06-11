@@ -22,4 +22,12 @@ class MainController extends Controller
     {
         return view('services');
     }
+    function blog()
+    {
+        return view('blog');
+    }
+    function contact_us()
+    {
+        return view('contact_us');
+    }
 }
