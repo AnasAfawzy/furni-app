@@ -18,4 +18,8 @@ class MainController extends Controller
     {
         return view('about_us');
     }
+    function services()
+    {
+        return view('services');
+    }
 }
