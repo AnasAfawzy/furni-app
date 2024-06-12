@@ -34,4 +34,12 @@ class MainController extends Controller
     {
         return view('cart');
     }
+    function checkout()
+    {
+        return view('checkout');
+    }
+    function thankyou()
+    {
+        return view('thankyou');
+    }
 }
