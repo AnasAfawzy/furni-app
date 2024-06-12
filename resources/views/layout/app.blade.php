@@ -40,19 +40,21 @@
 
             <div class="collapse navbar-collapse" id="navbarsFurni">
                 <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-                    <li class="nav-item active">
+                    <li class="@yield('home_status')">
                         <a class="nav-link" href="{{ route('home') }}">Home</a>
                     </li>
-                    <li><a class="nav-link" href="{{ route('shop') }}">Shop</a></li>
-                    <li><a class="nav-link" href="{{ route('about_us') }}">About us</a></li>
-                    <li><a class="nav-link" href="{{ route('services') }}">Services</a></li>
-                    <li><a class="nav-link" href="{{ route('blog') }}">Blog</a></li>
-                    <li><a class="nav-link" href="{{ route('contact_us') }}">Contact us</a></li>
+                    <li class="@yield('shop_status')"><a class="nav-link" href="{{ route('shop') }}">Shop</a></li>
+                    <li class="@yield('about_status')"><a class="nav-link" href="{{ route('about_us') }}">About us</a></li>
+                    <li class="@yield('services_status')"><a class="nav-link" href="{{ route('services') }}">Services</a></li>
+                    <li class="@yield('blog_status')"><a class="nav-link" href="{{ route('blog') }}">Blog</a></li>
+                    <li class="@yield('contact_status')"><a class="nav-link" href="{{ route('contact_us') }}">Contact us</a>
+                    </li>
                 </ul>
 
                 <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
                     <li><a class="nav-link" href="#"><img src="{{ asset('assets/images/user.svg') }}"></a></li>
-                    <li><a class="nav-link" href="cart.html"><img src="{{ asset('assets/images/cart.svg') }}"></a></li>
+                    <li><a class="nav-link" href="{{ route('cart') }}"><img
+                                src="{{ asset('assets/images/cart.svg') }}"></a></li>
                 </ul>
             </div>
         </div>

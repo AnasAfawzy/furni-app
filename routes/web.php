@@ -22,4 +22,5 @@ Route::controller(MainController::class)->group(function () {
     Route::get('/services', 'services')->name('services');
     Route::get('/blog', 'blog')->name('blog');
     Route::get('/contact_us', 'contact_us')->name('contact_us');
+    Route::get('/cart', 'cart')->name('cart');
 });

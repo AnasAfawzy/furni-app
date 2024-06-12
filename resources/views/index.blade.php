@@ -2,6 +2,7 @@
 @section('title')
     Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co
 @endsection
+@section('home_status', 'active')
 @section('content')
     <!-- Start Hero Section -->
     <div class="hero">

@@ -30,4 +30,8 @@ class MainController extends Controller
     {
         return view('contact_us');
     }
+    function cart()
+    {
+        return view('cart');
+    }
 }
