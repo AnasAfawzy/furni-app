@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -39,6 +40,10 @@ class MainController extends Controller
         return view('checkout');
     }
     function thankyou()
+    {
+        return view('thankyou');
+    }
+    function store(ContactRequest $request)
     {
         return view('thankyou');
     }

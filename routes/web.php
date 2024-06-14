@@ -25,4 +25,5 @@ Route::controller(MainController::class)->group(function () {
     Route::get('/cart', 'cart')->name('cart');
     Route::get('/checkout', 'checkout')->name('checkout');
     Route::get('/thankyou', 'thankyou')->name('thankyou');
+    Route::post('/contact/store', 'store')->name('contact_store');
 });
