@@ -25,7 +25,8 @@ class ContactRequest extends FormRequest
             'first_name' => 'required|string|min:10',
             'last_name' => 'required|string|min:5',
             'email' => 'required|email',
-            'message' => 'required'
+            'message' => 'required',
+            'catgory_id' => 'required|exists:catgories,id'
         ];
     }
     public function messages(): array
@@ -37,7 +38,8 @@ class ContactRequest extends FormRequest
             'last_name.min' => 'must be greter than 5',
             'email.required' => 'must input email',
             'email.email' => 'email not valid',
-            'message' => 'must input message'
+            'message' => 'must input message',
+            'catgory_id' => 'must input message'
         ];
     }
 }
