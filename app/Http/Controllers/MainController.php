@@ -31,10 +31,8 @@ class MainController extends Controller
     }
     function contact_us()
     {
-        // $catgories = Catgory::all();
-        // return view('contact_us', compact('catgories'));
-        $contact = Contact::find(3);
-        dd($contact->catgory->name);
+        $catgories = Catgory::all();
+        return view('contact_us', compact('catgories'));
     }
     function cart()
     {
@@ -53,5 +51,10 @@ class MainController extends Controller
         $validated = $request->validated();
         Contact::create($validated);
         return view('thankyou');
+    }
+    function contact_list()
+    {
+        $contacts = Contact::paginate(5);
+        return view('contact_list', compact('contacts'));
     }
 }
